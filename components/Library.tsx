@@ -3,12 +3,23 @@
 import React, { FC } from "react";
 import { LuLayers } from "react-icons/lu";
 import { AiOutlinePlus } from "react-icons/ai";
+import useAuthModal from "@/hooks/useAuthModal";
+import { useUser } from "@/hooks/useUser";
+import useUploadModal from "@/hooks/useUploadModal";
 
 type LibraryProps = {
 };
 
-const Library: FC<LibraryProps> = ({ }) => {
-    const onClick = () => {}
+const Library: FC<LibraryProps> = () => {
+  const uploadModal = useUploadModal()
+  const authModal = useAuthModal()
+  const { user } = useUser()
+    const onClick = () => {
+      if(!user) {
+        return authModal.onOpen()
+      }
+      return uploadModal.onOpen()
+    }
   return (
     <div className="flex flex-col">
       <div className="flex items-center justify-between px-5 pt-4">
