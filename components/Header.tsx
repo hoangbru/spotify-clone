@@ -10,13 +10,13 @@ import { FaUserAlt } from "react-icons/fa";
 
 import { useRouter } from "next/navigation";
 import Button from "./Button";
-import useAuthModal from "@/hooks/useAuthModal";
 import {
   SupabaseClient,
   useSupabaseClient,
 } from "@supabase/auth-helpers-react";
 import { useUser } from "@/hooks/useUser";
 import { toast } from "react-hot-toast";
+import useAuthModal from "@/hooks/useAuthModal";
 
 type HeaderProps = {
   children: React.ReactNode;
