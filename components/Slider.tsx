@@ -4,6 +4,7 @@ import React from "react";
 
 import * as RadixSlider from "@radix-ui/react-slider";
 
+
 type SliderProps = {
   value?: number;
   onChange?: (value: number) => void;
@@ -42,8 +43,10 @@ const Slider: React.FC<SliderProps> = ({ value = 1, onChange }) => {
       >
         <RadixSlider.Range
           className="
+            bg-white
             absolute 
-            bg-white 
+            focus:bg-green-500
+            hover:bg-green-500
             rounded-full 
             h-full
           "
