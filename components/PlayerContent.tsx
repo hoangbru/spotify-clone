@@ -151,11 +151,9 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
               bg-white 
               p-1 
               cursor-pointer
-              md:w-6
-              md:h-6
             "
         >
-          <Icon size={30} className="text-black md:w-2 md:h-2" />
+          <Icon size={30} className="text-black" />
         </div>
         <BiSkipNext
           onClick={onPlayNext}
